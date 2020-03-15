@@ -18,30 +18,32 @@
 </head>
 
 <body>
-  
-  <%- include('_navi') %>
-  
-  <!-- /#wrapper -->
   <div class="d-flex" id="wrapper">
+
+
     <%- include('_sidemenu') %>
-    <%- header %>
     
-    <!-- body -->
-    <%- body %>
-    
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <%- include('_navi') %>
+      
+      <!-- body -->
+      <%- body %>
+      
+      <footer>
+        <%- include('_footer') %>
+        <%- defineContent('footer') %>
+      </footer>
+    </div>
+    <!-- /#page-content-wrapper -->
     
   </div>
-  <!-- /#wrapper -->
-  
-  <footer>
-    <%- include('_footer') %>
-    <%- defineContent('footer') %>
-  </footer>
+  <!-- /#wrapper -->    
   
   <%- script %>
   
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/js/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
   <!-- Menu Toggle Script -->
